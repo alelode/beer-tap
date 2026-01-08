@@ -1,0 +1,69 @@
+/* Tall stem glass (Høyt stetteglass) - Teku style */
+
+.glass-visual.glass-type-stem-tall .glass-bowl-container {
+  height: 182px;
+  width: 170px;
+  padding-top: 6px;
+}
+
+.glass-visual.glass-type-stem-tall .glass-outline {
+  height: 182px;
+  width: 170px;
+  /* Teku-inspired tulip: broad belly low, tight neck, slight rim flare */
+  clip-path: polygon(
+    /* Left side - bottom to top (y=0 top, 100 bottom) */
+    50% 100%,  /* Bottom center */
+    46% 98%,
+    40% 94%,
+    32% 88%,
+    24% 80%,
+    16% 70%,
+    12% 62%,
+    10% 56%,   /* Widest belly */
+    11% 48%,
+    14% 40%,
+    18% 32%,
+    22% 26%,   /* Neck pinch */
+    25% 20%,   /* Start flare */
+    27% 12%,
+    30% 6%,
+    32% 0%,    /* Rim */
+    /* Right side - top to bottom */
+    68% 0%,    /* Rim */
+    70% 6%,
+    73% 12%,
+    75% 20%,   /* Start flare */
+    78% 26%,   /* Neck pinch */
+    82% 32%,
+    86% 40%,
+    89% 48%,
+    90% 56%,   /* Widest belly */
+    88% 62%,
+    84% 70%,
+    76% 80%,
+    68% 88%,
+    60% 94%,
+    54% 98%,
+    50% 100%   /* Bottom center */
+  );
+  border-radius: 0;
+}
+
+.glass-visual.glass-type-stem-tall .glass-rod {
+  height: 105px;
+  width: 11px;
+  margin-top: 2px;
+  box-shadow: 
+    0 4px 10px rgba(0, 0, 0, 0.3),
+    inset 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.glass-visual.glass-type-stem-tall .glass-base {
+  width: 78px;
+  height: 12px;
+  margin-top: 4px;
+  box-shadow: 
+    0 4px 10px rgba(0, 0, 0, 0.3),
+    inset 0 0 5px rgba(255, 255, 255, 0.15);
+}
+

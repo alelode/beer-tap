@@ -1,0 +1,26 @@
+/* Seidel (beer mug) */
+
+.glass-visual.glass-type-seidel .glass-bowl-container {
+  height: 200px;
+  width: 160px;
+  padding-top: 10px;
+}
+
+.glass-visual.glass-type-seidel .glass-outline {
+  height: 200px;
+  width: 160px;
+  clip-path: none;
+  -webkit-clip-path: none;
+  border-radius: 12px 12px 16px 16px;
+  transform: none;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 
+    0 4px 15px rgba(0, 0, 0, 0.3),
+    inset 0 0 15px rgba(255, 255, 255, 0.15);
+}
+
+.glass-visual.glass-type-seidel .glass-liquid {
+  border-radius: 0;
+  transform: none;
+}
+

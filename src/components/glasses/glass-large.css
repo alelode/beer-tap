@@ -1,0 +1,25 @@
+/* Large stem glass (Stort stetteglass) */
+
+.glass-visual.glass-type-stem-large .glass-bowl-container {
+  height: 180px;
+  width: 180px;
+  padding-top: 20px;
+}
+
+.glass-visual.glass-type-stem-large .glass-outline {
+  height: 180px;
+  width: 180px;
+}
+
+.glass-visual.glass-type-stem-large .glass-rod {
+  height: 90px;
+  margin-top: 26px;
+  width: 14px;
+}
+
+.glass-visual.glass-type-stem-large .glass-base {
+  width: 90px;
+  height: 14px;
+  margin-top: 2px;
+}
+

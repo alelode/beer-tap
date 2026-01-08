@@ -1,0 +1,139 @@
+{
+    "types": [
+        "1A Internasjonal lager",
+        "1B Tsjekkisk pilsner",
+        "1C Tysk pilsner",
+        "1D Münchener Helles",
+        "1E Norsk pilsner butikk-klasse",
+        "2A Wiener",
+        "2B Märzen",
+        "2C Münchener Dunkel",
+        "2D Mørk tsjekkisk lager",
+        "2E Schwarzbier",
+        "2F Klassisk røykøl",
+        "3A Helles Bock/Maibock",
+        "3B Bock",
+        "3C Doppelbock",
+        "3D Eisbock",
+        "3E Klassisk norsk juleøl",
+        "3F Klassisk norsk juleøl butikk-klasse",
+        "4A Engelsk bitter",
+        "4B Engelsk pale ale",
+        "4C Engelsk golden ale",
+        "4D Amerikansk pale ale",
+        "4E California common/Steam beer",
+        "4F Kölsch",
+        "4G Irsk rød",
+        "4H Amerikansk amber",
+        "5A Engelsk brown ale",
+        "5B Amerikansk brown ale",
+        "5C Engelsk dark mild",
+        "5D Altbier",
+        "5E Skotsk ale",
+        "5F Skotsk sterk ale/Wee heavy",
+        "5G Old ale",
+        "5H Engelsk barley wine",
+        "5I Amerikansk barley wine",
+        "6A Engelsk IPA",
+        "6B Amerikansk IPA",
+        "6C Imperial IPA",
+        "6D Hazy IPA",
+        "7A Weizen/Weissbier",
+        "7B Dunkelweizen",
+        "7C Belgisk wit",
+        "7D Weizen bock",
+        "8A Dry stout",
+        "8B Sweet stout",
+        "8C Oatmeal stout",
+        "8D Porter",
+        "8E Moderne porter og stout",
+        "8F Foreign extra stout",
+        "8G Baltisk porter",
+        "8H Imperial stout",
+        "9A Belgisk blond",
+        "9B Lys sterk belgisk ale",
+        "9C Bière de garde",
+        "9D Saison",
+        "10A Belgisk dubbel/bruin",
+        "10B Mørk sterk belgisk ale",
+        "11A Gueuze lambic",
+        "11B Belgisk frukt lambic",
+        "11C Flamsk surøl",
+        "11D Berliner weisse",
+        "11E Gose",
+        "12A Stjørdalsøl",
+        "12B Heimabrugg",
+        "12C Kornøl",
+        "13A Frukt/grønnsaksøl",
+        "13B Krydret øl",
+        "13C Trelagret øl",
+        "13D Andre røykøl",
+        "13E Andre tilsetninger"
+    ],
+    "glassTypes": [
+        {
+            "name": "Høyt stetteglass",
+            "volume": 0.33
+        },
+        {
+            "name": "Lavt stetteglass",
+            "volume": 0.4
+        },
+        {
+            "name": "Stort stetteglass",
+            "volume": 0.5
+        },
+        {
+            "name": "Seidel",
+            "volume": 0.4
+        }
+    ],
+    "onTap": {
+        "line3": {
+            "type": "6B Amerikansk IPA",
+            "name": "Mongo IPA",
+            "abv": 5.1,
+            "ibu": 12,
+            "ebc": 10,
+            "color": "#FBB123",
+            "description": "Mongo IPA er en alltid glad og smilende øl",
+            "liters": 20,
+            "remainingLiters": 12.349220042206257
+        },
+        "line2": {
+            "type": "1B Tsjekkisk pilsner",
+            "name": "Helge Følelsen",
+            "abv": 5.1,
+            "ibu": 43,
+            "ebc": 7.5,
+            "color": "#FFBF42",
+            "description": "Helge Følelsen er en tsjekkisk pilsner som smaker fredags ettermidddag",
+            "liters": 20,
+            "remainingLiters": 5.179188527843909
+        },
+        "line1": {
+            "type": "1B Tsjekkisk pilsner",
+            "name": "Påfyll",
+            "abv": 4.9,
+            "ibu": 35,
+            "ebc": 7,
+            "color": "#3413d8",
+            "description": "Påfyll er en tsjekkisk pilsner. Den er perfekt til å fylle opp glasset med",
+            "liters": 20,
+            "remainingLiters": 12.378277149403845
+        }
+    },
+    "old": [
+        {
+            "type": "6D Hazy IPA",
+            "name": "Cloudy Grain",
+            "abv": 6.3,
+            "ibu": 28,
+            "ebc": 9.7,
+            "color": "#FBB123",
+            "description": "Cloudy Grain er en Hazy IPA som vant 4 plass på Annige bars hjemmebrygggeaften 2025",
+            "liters": 20,
+            "remainingLiters": 0
+        }
+    ]
+}
