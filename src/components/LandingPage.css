@@ -251,8 +251,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 350px;
-  height: 350px;
+  min-height: 450px;
   flex: 1;
   flex-shrink: 0;
   position: relative;
@@ -261,37 +260,45 @@
 }
 
 .glass-display-placeholder {
-  width: 160px;
-  height: 280px;
+  width: 400px;
+  height: auto;
 }
 
 .glass-display-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
+  gap: 0;
   position: relative;
   overflow: visible;
   contain: layout style;
+  margin: 0;
+  padding: 0;
 }
 
 .glass-visual {
-  width: 160px;
-  height: 280px;
+  width: auto;
+  max-width: 400px;
   position: relative;
   cursor: default;
   transition: transform 0.3s ease;
   margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
+  display: inline-block;
   touch-action: none;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   user-select: none;
   z-index: 0;
   isolation: isolate;
+  line-height: 0;
+  font-size: 0;
+}
+
+.glass-visual .glass-bowl-container {
+  width: 100%;
+  position: relative;
+  display: inline-block;
+  line-height: 0;
 }
 
 .glass-visual.glass-ready {
@@ -304,67 +311,59 @@
 }
 
 .glass-bowl-container {
-  height: 160px;
-  width: 160px;
+  width: auto;
   position: relative;
-  margin: 0 auto;
-  padding-top: 24px;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+  display: inline-block;
+  line-height: 0;
+  font-size: 0;
+}
+
+.glass-image {
+  width: auto;
+  max-width: 400px;
+  height: auto;
+  display: block;
+  position: relative;
+  z-index: 1;
+  pointer-events: none;
+  margin: 0;
+  padding: 0;
+  vertical-align: top;
 }
 
 .glass-outline {
-  height: 160px;
-  width: 160px;
-  background: rgba(255, 255, 255, 0.15);
-  margin: 0 auto;
-  -webkit-clip-path: polygon(0 1%, 100% 0, 95% 100%, 6% 100%);
-  clip-path: polygon(0 1%, 100% 0, 95% 100%, 6% 100%);
-  border-radius: 50% 50% 0 0;
-  transform: rotate(180deg);
-  overflow: hidden;
-  box-shadow: 
-    0 0px 0px rgba(0, 0, 0, 0),
-    inset 0 0 10px rgba(255, 255, 255, 0.2),
-    0 0 0 0px rgba(255, 255, 255, 0.4);
-  position: relative;
-  backdrop-filter: blur(2px);
-}
-
-.glass-liquid {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  margin: 0;
+  padding: 0;
+  transform: none;
+  overflow: hidden;
+  z-index: 2;
+  pointer-events: auto;
+}
+
+.glass-liquid {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
   width: 100%;
   background-color: rgba(255, 0, 0, 0.7);
-  border-radius: 50% 50% 0 0;
+  border-radius: 0;
   transition: height 0.1s linear;
   box-shadow: inset 0 -10px 20px rgba(0, 0, 0, 0.2);
 }
 
-.glass-rod {
-  height: 104px;
-  width: 12px;
-  background: rgba(255, 255, 255, 0.2);
-  margin: 24px auto 0;
-  border-radius: 0 0 5px 5px;
-  box-shadow: 
-    0 4px 10px rgba(0, 0, 0, 0.3),
-    0 0 0 2px rgba(255, 255, 255, 0.4);
-  backdrop-filter: blur(1px);
-}
-
-.glass-base {
-  width: 80px;
-  height: 12px;
-  background-color: rgba(255, 255, 255, 0.2);
-  margin: 3px auto 0;
-  border-radius: 50%;
-  box-shadow: 
-    0 4px 10px rgba(0, 0, 0, 0.3),
-    0 0 0 3px rgba(255, 255, 255, 0.4);
-  backdrop-filter: blur(1px);
-}
+/* Glass rod and base removed - now part of the image */
 
 /* Glass Type Variations - Imported at the top of the file */
 
@@ -405,7 +404,6 @@
   overflow: hidden;
   pointer-events: none;
   z-index: 5;
-  transform: rotate(180deg);
 }
 
 .bubble {
@@ -897,17 +895,6 @@
     width: 150px;
   }
   
-  .glass-rod {
-    height: 80px;
-    width: 12px;
-    margin-top: 20px;
-  }
-  
-  .glass-base {
-    width: 70px;
-    height: 12px;
-    margin-top: 2px;
-  }
   
   .glass-beer-info {
     top: -50px;
@@ -1019,11 +1006,6 @@
     width: 120px;
   }
   
-  .glass-rod {
-    height: 60px;
-    width: 10px;
-    margin-top: 15px;
-  }
   
   .glass-selection {
     margin-top: 0.25rem;

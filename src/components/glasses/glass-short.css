@@ -1,12 +1,4 @@
 /* Short stem glass (Lavt stetteglass) */
+/* Size constraints removed - image now fills container */
 
-.glass-visual.glass-type-stem-short .glass-rod {
-  height: 70px;
-  margin-top: 30px;
-}
-
-.glass-visual.glass-type-stem-short .glass-base {
-  margin-top: 4px;
-  width: 90px;
-}
 

@@ -109,7 +109,7 @@
             "color": "#FFBF42",
             "description": "Helge Følelsen er en tsjekkisk pilsner som smaker fredags ettermidddag",
             "liters": 20,
-            "remainingLiters": 5.179188527843909
+            "remainingLiters": 0
         },
         "line1": {
             "type": "1B Tsjekkisk pilsner",
@@ -120,7 +120,7 @@
             "color": "#3413d8",
             "description": "Påfyll er en tsjekkisk pilsner. Den er perfekt til å fylle opp glasset med",
             "liters": 20,
-            "remainingLiters": 12.378277149403845
+            "remainingLiters": 10.666489878467289
         }
     },
     "old": [

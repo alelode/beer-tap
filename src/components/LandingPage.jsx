@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react'
 import { Link } from 'react-router-dom'
 import './LandingPage.css'
+import tekuImage from '../assets/teku.webp'
 
 function LandingPage() {
   const [beers, setBeers] = useState([])
@@ -91,8 +92,7 @@ function LandingPage() {
       const y = clientY - outlineRect.top
       const height = outlineRect.height
       
-      // Calculate fill level (inverted: bottom is 1, top is 0)
-      // Since glass-outline is rotated 180deg, we need to account for that
+      // Calculate fill level (top is 1, bottom is 0) - dragging up fills the glass
       const newFillLevel = Math.max(0, Math.min(1, 1 - (y / height)))
       fillLevelRef.current = newFillLevel
       setFillLevel(newFillLevel)
@@ -150,6 +150,7 @@ function LandingPage() {
     const clientY = e.touches && e.touches.length > 0 ? e.touches[0].clientY : e.clientY
     const y = clientY - outlineRect.top
     const height = outlineRect.height
+    // Calculate fill level (top is 1, bottom is 0) - dragging up fills the glass
     const newFillLevel = Math.max(0, Math.min(1, 1 - (y / height)))
     fillLevelRef.current = newFillLevel
     setFillLevel(newFillLevel)
@@ -441,7 +442,24 @@ function LandingPage() {
                   }}
                 >
                   <div className="glass-bowl-container">
-                    <div className="glass-outline">
+                    <img 
+                      src={tekuImage} 
+                      alt="Beer glass" 
+                      className="glass-image"
+                    />
+                    <div 
+                      className="glass-outline"
+                      style={{
+                        WebkitMaskImage: `url(${tekuImage})`,
+                        maskImage: `url(${tekuImage})`,
+                        WebkitMaskSize: 'contain',
+                        maskSize: 'contain',
+                        WebkitMaskRepeat: 'no-repeat',
+                        maskRepeat: 'no-repeat',
+                        WebkitMaskPosition: 'center',
+                        maskPosition: 'center'
+                      }}
+                    >
                       <div 
                         className="glass-liquid"
                         style={{
@@ -451,7 +469,7 @@ function LandingPage() {
                         }}
                       />
                     {fillLevel > 0 && (
-                      <div className="glass-foam" style={{ top: `${fillLevel * 100}%` }} />
+                      <div className="glass-foam" style={{ bottom: `${fillLevel * 100}%` }} />
                     )}
                     {isPouring && fillLevel > 0 && (
                       <div className="bubbles-container" style={{ height: `${fillLevel * 100}%` }}>
@@ -470,12 +488,6 @@ function LandingPage() {
                     )}
                     </div>
                   </div>
-                  {!isSeidel && (
-                    <>
-                      <div className="glass-rod"></div>
-                      <div className="glass-base"></div>
-                    </>
-                  )}
                 </div>
               )
             })()}
