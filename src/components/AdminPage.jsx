@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import './AdminPage.css'
+import ebcToHex from '../utils/ebcToColor'
 
 function AdminPage() {
   const [state, setState] = useState(null)
@@ -534,7 +535,14 @@ function BeerForm({ types, initialData, onSave, onCancel }) {
             type="number"
             step="0.1"
             value={formData.ebc}
-            onChange={(e) => setFormData({ ...formData, ebc: parseFloat(e.target.value) || 0 })}
+            onChange={(e) => {
+              const ebcValue = parseFloat(e.target.value) || 0;
+              setFormData({ 
+                ...formData, 
+                ebc: ebcValue,
+                color: ebcToHex(ebcValue)
+              });
+            }}
             required
           />
         </div>
